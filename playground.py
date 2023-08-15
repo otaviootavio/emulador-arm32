@@ -114,6 +114,13 @@ class ARM82Simulator:
         for flag, value in self.flags.items():
             print(f"{flag}: {value}")
 
+        print("Memory:")
+        for i in range(32):
+            for j in range(32):
+                print(f"{self.memory[32*i+j]}",end='')
+        print(f'')
+
+
 def playground():
     simulator = ARM82Simulator()
     while True:
