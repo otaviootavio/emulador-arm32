@@ -92,7 +92,7 @@ class ARM32Simulator:
                     if hasattr(Operations, operation_name):
                         getattr(Operations, operation_name)(self, parts, update_flag, barrel)
                     elif hasattr(MemoryOperations, operation_name.lower()):
-                        getattr(MemoryOperations, operation_name.lower())(self, parts, update_flag)
+                        getattr(MemoryOperations, operation_name.lower())(self, parts)
                     else:
                         print("Instrução não reconhecida.")
                         return
