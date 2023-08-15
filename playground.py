@@ -7,7 +7,7 @@ from play_jump_operations import *
 def playground():
     formattedPrint("Você entrou no modo playground", True)
 
-class ARM82Simulator:
+class ARM32Simulator:
     def __init__(self):
         self.registers = {f'R{i}': 0 for i in range(15)}
         self.registers['PC'] = 0
@@ -122,7 +122,7 @@ class ARM82Simulator:
 
 
 def playground():
-    simulator = ARM82Simulator()
+    simulator = ARM32Simulator()
     while True:
         instruction = input("Digite a próxima instrução (ou 'voltar' para encerrar o modo playground): ")
         
